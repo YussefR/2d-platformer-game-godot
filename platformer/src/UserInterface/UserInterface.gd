@@ -1,16 +1,16 @@
 extends Control
 
-onready var scene_tree: SceneTree = get_tree()
-onready var pause_overlay: ColorRect = $PauseOverlay
-onready var score_label: Label = $ScoreLabel
-onready var pause_title: Label = $PauseOverlay/Title
+@onready var scene_tree: SceneTree = get_tree()
+@onready var pause_overlay: ColorRect = $PauseOverlay
+@onready var score_label: Label = $ScoreLabel
+@onready var pause_title: Label = $PauseOverlay/Title
 
-var paused: = false setget set_paused
+var paused: = false: set = set_paused
 
 
 func _ready() -> void:
-	PlayerData.connect("updated", self, "update_interface")
-	PlayerData.connect("died", self, "_PlayerData_player_died")
+	PlayerData.connect("updated", Callable(self, "update_interface"))
+	PlayerData.connect("died", Callable(self, "_PlayerData_player_died"))
 	
 	update_interface()
 

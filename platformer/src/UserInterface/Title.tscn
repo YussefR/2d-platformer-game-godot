@@ -1,15 +1,15 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://assets/font_title.tres" type="DynamicFont" id=1]
+[ext_resource path="res://assets/font_title.tres" type="FontFile" id=1]
 
 [node name="Title" type="Label"]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -236.0
-margin_top = 98.0
-margin_right = 264.0
-margin_bottom = 155.0
-custom_fonts/font = ExtResource( 1 )
+offset_left = -236.0
+offset_top = 98.0
+offset_right = 264.0
+offset_bottom = 155.0
+theme_override_fonts/font = ExtResource( 1 )
 text = "2D Platformer Game"
 align = 1
 __meta__ = {

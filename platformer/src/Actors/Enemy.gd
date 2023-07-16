@@ -1,7 +1,7 @@
 extends Actor
 
 
-export var score: = 100
+@export var score: = 100
 
 func _ready() -> void:
 	set_physics_process(false)
@@ -22,7 +22,10 @@ func _physics_process(delta: float) -> void:
 	if is_on_wall():
 		_velocity.x *= -1.0
 
-	_velocity.y = move_and_slide(_velocity, FLOOR_NORMAL).y
+	set_velocity(_velocity)
+	set_up_direction(FLOOR_NORMAL)
+	move_and_slide()
+	_velocity.y = velocity.y
 
 
 func die() -> void:

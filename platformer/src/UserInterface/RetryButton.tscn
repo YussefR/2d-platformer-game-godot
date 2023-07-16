@@ -3,8 +3,8 @@
 [ext_resource path="res://src/UserInterface/RetryButton.gd" type="Script" id=1]
 
 [node name="RetryButton" type="Button"]
-margin_right = 194.0
-margin_bottom = 50.0
+offset_right = 194.0
+offset_bottom = 50.0
 size_flags_vertical = 3
 text = "Retry"
 script = ExtResource( 1 )
